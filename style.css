@@ -1,0 +1,21 @@
+.body {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+}
+
+.image-container {
+    background-image: url(images/background3.jpg);
+    background-color: #E2B2B5;
+    width: 40%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-text {
+    font-family: 'Bungee Shade', cursive;
+}
