@@ -16,6 +16,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    /* take out min width when add mobile support*/
+    min-width: 400px;
 }
 
 .logo-container {
@@ -29,6 +31,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    min-width: fit-content;
+    
 }
 
 .logo {
@@ -79,23 +83,53 @@ body {
     width: min(100%, 800px);
 }
 
-.form-section {
+.form-div {
     display: flex;
     flex-direction: column;
     width: max(300px, 40%);
 }
 
-.form-section label {
+.form-div label {
     font-size: 14px;
     color:#383838;
 }
 
-.form-section input {
+.form-div input {
     font-family: inherit;
     border: 1px solid #b8b8b8;
     border-radius: 3px;
     padding: 5px;
     font-size: 16px;
+}
+
+.text-present.input:invalid {
+    border: 1px solid red;
+}
+
+.text-present.input:invalid + span::after {
+    color: red;
+    font-size: 13px;
+    position: absolute;
+    padding-top: 2px;
+}
+
+.text-present.input[type="email"]:invalid + span::after {
+    content: "PLEASE ENTER A VALID EMAIL ADDRESS";
+}
+
+.text-present.input[type="tel"]:invalid + span::after {
+    content: "PLEASE ENTER A 10 DIGIT PHONE NUMBER";
+}
+
+.text-present.input[type="password"]:invalid + span::after {
+    
+}
+
+.form-div input:focus {
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    background-color: white;
 }
 
 .button-container {

@@ -28,29 +28,33 @@
                     <div class="form-box">
                         <div class="form-header">Let's do this!</div>
                         <div class="form-inputs">
-                            <div class="form-section">
-                                <label for="first_name">FIRST NAME</label>
-                                <input type="text" id="first_name" name="first_name">
+                            <div class="form-div">
+                                <label for="first_name">FIRST NAME*</label>
+                                <input type="text" id="first_name" name="first_name" class="input" required>
                             </div>
-                            <div class="form-section">
-                                <label for="last_name">LAST NAME</label>
-                                <input type="text" id="last_name" name="last_name">
+                            <div class="form-div">
+                                <label for="last_name">LAST NAME*</label>
+                                <input type="text" id="last_name" name="last_name" class="input" required>
                             </div>
-                            <div class="form-section">
-                                <label for="email">EMAIL</label>
-                                <input type="email" id="email" name="email">
+                            <div class="form-div">
+                                <label for="email">EMAIL*</label>
+                                <input type="email" id="email" name="email" class="input" required>
+                                <span></span>
                             </div>
-                            <div class="form-section">
+                            <div class="form-div">
                                 <label for="phone_number">PHONE NUMBER</label>
-                                <input type="tel" id="phone_number" name="phone_number">
+                                <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{10}" class="input">
+                                <span></span>
                             </div>
-                            <div class="form-section">
-                                <label for="password">PASSWORD</label>
-                                <input type="password" id="password" name="password">
+                            <div class="form-div">
+                                <label for="password">PASSWORD*</label>
+                                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input" required>
+                                <span></span>
                             </div>
-                            <div class="form-section">
-                                <label for="confirm_passsword">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm_password" name="confirm_password">
+                            <div class="form-div">
+                                <label for="confirm_passsword">CONFIRM PASSWORD*</label>
+                                <input type="password" id="confirm_password" name="confirm_password" class="input" required>
+                                <span></span>
                             </div>
                         </div>
                     </div>
@@ -64,6 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
 
