@@ -67,7 +67,7 @@ body {
     background-color: #ffffff;
     border: .5px solid #f1f1f1;
     box-shadow: 0 5px 10px #f1f1f1;
-    padding: 30px 50px;
+    padding: 50px 50px;
 }
 
 .form-header {
@@ -102,15 +102,19 @@ body {
     font-size: 16px;
 }
 
-.text-present.input:invalid {
+.text-present.input:invalid,
+.no-match.text-present.pwd-conf {
     border: 1px solid red;
 }
 
-.text-present.input:invalid + span::after {
+.text-present.input:invalid + span::after,
+.no-match.text-present.pwd-conf + span::after {
     color: red;
-    font-size: 13px;
     position: absolute;
+    font-size: 13px;
     padding-top: 2px;
+    display: block;
+    max-width: 300px;
 }
 
 .text-present.input[type="email"]:invalid + span::after {
@@ -121,8 +125,12 @@ body {
     content: "PLEASE ENTER A 10 DIGIT PHONE NUMBER";
 }
 
-.text-present.input[type="password"]:invalid + span::after {
-    
+.text-present.pwd:invalid + span::after {
+    content: "MUST CONTAIN AT LEAST ONE NUMBER, ONE UPPERCASE LETTER, ONE LOWERCASE LETTER, AND AT LEAST 8 CHARACTERS"
+}
+
+.no-match.text-present.pwd-conf + span::after {
+    content: "PASSWORDS DO NOT MATCH";
 }
 
 .form-div input:focus {
