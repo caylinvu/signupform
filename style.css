@@ -54,7 +54,7 @@ body {
 }
 
 .text-above {
-    padding: 0 50px 40px;
+    padding: 0 50px 30px;
 }
 
 .text-above p {
@@ -67,7 +67,7 @@ body {
     background-color: #ffffff;
     border: .5px solid #f1f1f1;
     box-shadow: 0 5px 10px #f1f1f1;
-    padding: 50px 50px;
+    padding: 40px 50px 50px;
 }
 
 .form-header {
@@ -141,7 +141,7 @@ body {
 }
 
 .button-container {
-    padding: 30px 50px 0;
+    padding: 40px 50px 0;
 }
 
 .button-container button {
@@ -157,4 +157,10 @@ body {
 
 .text-below {
     padding: 10px 50px 0;
+}
+
+.text-below a:link,
+.text-below a:visited {
+    color: #b9628f;
+    text-decoration: none;
 }
