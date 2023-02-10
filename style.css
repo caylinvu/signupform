@@ -83,13 +83,14 @@ body {
     background-color: #ffffff;
     border: .5px solid #f1f1f1;
     box-shadow: 0 5px 10px #f1f1f1;
-    padding: 40px 50px 50px;
+    padding: 60px 50px;
 }
 
 .form-header {
     padding-bottom: 30px;
     font-weight: bold;
     font-size: 20px;
+    color: #ad6e8f;
 }
 
 .form-inputs {
@@ -204,4 +205,66 @@ body {
 .text-below a:visited {
     color: #b9628f;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1253px) {
+    .text-present.pwd:invalid + span::after,
+    .submitted.pwd:invalid + span::after {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-container {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .logo-container {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 30%;
+    }
+
+    .content-container {
+        width: 100%;
+    }
+
+    .text-above {
+        padding: 0 11% 0;
+        text-align: center;
+    }
+
+    .text-above p {
+        padding: 0;
+    }
+
+    .form-box {
+        padding: 40px 11% 50px;
+    }
+
+    .form-header {
+        text-align: center;
+    }
+
+    .form-inputs {
+        justify-content: center;
+    }
+
+    .button-container {
+        text-align: center;
+        padding-top: 35px;
+    }
+
+    .text-below {
+        text-align: center;
+        padding-top: 5px;
+        margin-bottom: 50px;
+    }
 }
