@@ -119,12 +119,14 @@ body {
 }
 
 .text-present.input:invalid,
-.no-match.text-present.pwd-conf {
+.no-match.text-present.pwd-conf,
+.submitted.input:invalid {
     border: 1px solid red;
 }
 
 .text-present.input:invalid + span::after,
-.no-match.text-present.pwd-conf + span::after {
+.no-match.text-present.pwd-conf + span::after,
+.submitted.input:invalid + span::after {
     color: red;
     position: absolute;
     font-size: 13px;
@@ -133,19 +135,33 @@ body {
     max-width: 300px;
 }
 
-.text-present.input[type="email"]:invalid + span::after {
+.text-present.first:invalid + span::after,
+.submitted.first:invalid + span::after {
+    content: "PLEASE ENTER YOUR FIRST NAME";
+}
+
+.text-present.last:invalid + span::after,
+.submitted.last:invalid + span::after {
+    content: "PLEASE ENTER YOUR LAST NAME";
+}
+
+.text-present.input[type="email"]:invalid + span::after,
+.submitted.input[type="email"]:invalid + span::after {
     content: "PLEASE ENTER A VALID EMAIL ADDRESS";
 }
 
-.text-present.input[type="tel"]:invalid + span::after {
+.text-present.input[type="tel"]:invalid + span::after,
+.submitted.input[type="tel"]:invalid + span::after {
     content: "PLEASE ENTER A 10 DIGIT PHONE NUMBER";
 }
 
-.text-present.pwd:invalid + span::after {
+.text-present.pwd:invalid + span::after,
+.submitted.pwd:invalid + span::after {
     content: "MUST CONTAIN AT LEAST ONE NUMBER, ONE UPPERCASE LETTER, ONE LOWERCASE LETTER, AND AT LEAST 8 CHARACTERS"
 }
 
-.no-match.text-present.pwd-conf + span::after {
+.no-match.text-present.pwd-conf + span::after,
+.no-match.submitted.pwd-conf + span::after {
     content: "PASSWORDS DO NOT MATCH";
 }
 
@@ -169,6 +185,15 @@ body {
     background-color: #d98db4;
     color: white;
     font-weight: bold;
+}
+
+.button-container button:hover {
+    cursor: pointer;
+    background-color: #ad6e8f;
+}
+
+.button-container button:active {
+    background-color: #d98db4;
 }
 
 .text-below {
