@@ -46,6 +46,22 @@ body {
     color: white;
 }
 
+.photo-cred {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px 6px;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.photo-cred,
+.photo-cred a:link,
+.photo-cred a:visited {
+    color: white;
+    font-size: 15px;
+}
+
 .content-container {
     width: 60%;
     display: flex;
