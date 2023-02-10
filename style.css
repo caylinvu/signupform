@@ -40,7 +40,7 @@ body {
 }
 
 .logo-text {
-    font-family: 'Monoton', cursive;
+    font-family: 'Monoton', 'Courier New', Courier, monospace;
     font-size: 60px;
     color: white;
 }
