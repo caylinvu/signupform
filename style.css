@@ -16,7 +16,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    /* take out min width when add mobile support*/
     min-width: 400px;
 }
 
@@ -70,20 +69,21 @@ body {
 }
 
 .text-above {
-    padding: 0 50px 30px;
+    padding: 0 50px 20px;
 }
 
 .text-above p {
     font-weight: bold;
     padding-right: 50px;
     font-size: 20px;
+    padding-top: 10px;
 }
 
 .form-box {
     background-color: #ffffff;
     border: .5px solid #f1f1f1;
     box-shadow: 0 5px 10px #f1f1f1;
-    padding: 60px 50px;
+    padding: 50px 50px 60px;
 }
 
 .form-header {
